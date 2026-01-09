@@ -1,71 +1,57 @@
+import { Link } from "react-router-dom";
+
 function CreateAccount() {
   return (
-    <div>
-      {/* Header */}
-      <div>
-        <div>LOGO</div>
+    <div className="page">
+      <div className="header">
+        <div className="logo">🏢</div>
         <h1>Presentia</h1>
         <p>Workforce Attendance System</p>
       </div>
 
-      {/* Main Card */}
-      <div>
+      <div className="card">
         <h2>Create account</h2>
-        <p>For business, band or celebrity.</p>
+        <p className="subtitle">For business, band or celebrity.</p>
 
-        {/* Form */}
-        <form>
-          <div>
-            <div>
-              <label>First name</label>
-              <input type="text" />
-            </div>
-
-            <div>
-              <label>Last name</label>
-              <input type="text" />
-            </div>
+        <div className="form-row">
+          <div className="form-group">
+            <label>First name</label>
+            <input type="text" />
           </div>
 
-          <div>
-            <div>
-              <label>Email or phone number</label>
-              <input type="text" />
-            </div>
+          <div className="form-group">
+            <label>Last name</label>
+            <input type="text" />
+          </div>
+        </div>
 
-            <div>
-              <label>Date of birth (MM/DD/YY)</label>
-              <input type="date" />
-            </div>
+        <div className="form-row">
+          <div className="form-group">
+            <label>Email or phone number</label>
+            <input type="text" />
           </div>
 
-          <div>
-            <div>
-              <label>Password</label>
-              <input type="password" />
-            </div>
+          <div className="form-group">
+            <label>Date of birth</label>
+            <input type="date" />
+          </div>
+        </div>
 
-            <div>
-              <label>Confirm password</label>
-              <input type="password" />
-            </div>
+        <div className="form-row">
+          <div className="form-group">
+            <label>Password</label>
+            <input type="password" />
           </div>
 
-          <div>
-            <input type="checkbox" />
-            <label>Remember me</label>
+          <div className="form-group">
+            <label>Confirm password</label>
+            <input type="password" />
           </div>
-
-          <Link to="/signup">
-          <button>Create Account →</button>
-        </Link>
-        </form>
+        </div>
+        <Link to={"/signup"}><button>Create account</button></Link>
       </div>
 
-      {/* Footer */}
-      <footer>
-        <p>© 2025 Presentia Systems Inc. All rights reserved.</p>
-      </footer>
+      <footer>© 2025 Presentia Systems Inc. All rights reserved.</footer>
     </div>
   );
 }

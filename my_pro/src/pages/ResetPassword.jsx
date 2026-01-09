@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Signup() {
+function ResetPassword() {
   return (
     <div className="page">
       <div className="header">
@@ -10,34 +10,34 @@ function Signup() {
       </div>
 
       <div className="card">
-        <h2>Welcome Back</h2>
-        <p className="subtitle">
-          Sign in to your organization's workspace
-        </p>
+        <h2>Forgot Password</h2>
 
         <div className="form-group">
-          <label>Company Name / ID</label>
+          <label>Enter OTP</label>
           <input type="text" />
         </div>
 
         <div className="form-group">
-          <label>Email</label>
-          <input type="email" />
+          <label>New Password</label>
+          <input type="password" />
         </div>
 
         <div className="form-group">
-          <label>Password</label>
+          <label>Confirm Password</label>
           <input type="password" />
         </div>
-        <div>
-       <Link to={"/dashboard"}> <button>Sign In →</button></Link>
+
+        <button>Update Password →</button>
 
         <p className="text-center">
-          <Link className="link" to="/forgot-password">
-            Forgot password?
+          <Link className="link" to="/signup">
+            Back to Login
           </Link>
         </p>
-        </div>
+
+        <p className="security-text">
+          Protected by enterprise-grade security.
+        </p>
       </div>
 
       <footer>© 2025 Presentia Systems Inc. All rights reserved.</footer>
@@ -45,4 +45,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default ResetPassword;

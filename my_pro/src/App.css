@@ -1,42 +1,182 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ... rest of common CSS exactly same ... */
+
+
+
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================
+   PAGE BACKGROUND
+========================= */
+.page {
+  min-height: 150vh;
+  width: 100%;
+  background: linear-gradient(180deg, #1e2a52, #243566);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  margin-top: 30px;
   text-align: center;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  width: 48px;
+  height: 48px;
+  background: #4f7df3;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-size: 22px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header h1 {
+  font-size: 26px;
+  font-weight: 600;
 }
 
+.header p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* =========================
+   CARD
+========================= */
 .card {
-  padding: 2em;
+  background: #f4f6fb;
+  color: #333;
+  width: 500px;
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
 }
 
-.read-the-docs {
-  color: #888;
+/* Titles */
+.card h2 {
+  text-align: center;
+  color: #ff5c5c;
+  margin-bottom: 10px;
+}
+
+.card .subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   FORM
+========================= */
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4f7df3;
+}
+
+/* Two column layout (Create Account page) */
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: #f25f5c;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   LINKS & TEXT
+========================= */
+.link {
+  color: #4f7df3;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.text-center {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.security-text {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  margin-top: auto;
+  margin-bottom: 20px;
+  font-size: 12px;
+  opacity: 0.7;
 }
